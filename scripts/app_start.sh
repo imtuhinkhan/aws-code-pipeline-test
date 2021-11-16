@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/server/src
+cd /var/www
 npm start
 pm2 start npm --name "react-app" -- start
 pm2 startup
