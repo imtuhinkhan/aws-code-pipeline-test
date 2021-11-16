@@ -1,4 +1,0 @@
-#!/bin/bash
-sudo install -y httpd
-npm install
-npm run build
