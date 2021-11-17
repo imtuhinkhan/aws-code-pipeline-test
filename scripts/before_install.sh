@@ -1,4 +1,9 @@
 #!/bin/bash
 cd /var/www
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-get install nodejs
+if which node > /dev/null
+    then
+        echo "node is installed, skipping..."
+    else
+        curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+        sudo apt-get install nodejs
+fi
